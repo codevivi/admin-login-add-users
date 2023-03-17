@@ -1,0 +1,13 @@
+{
+  "name": "friday-timed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "star": "node .",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vilma",
+  "license": "ISC"
+}
