@@ -11,20 +11,24 @@ app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 
 app.get("/", (req, res) => {
-  res.render("login");
+  res.render("login", { message: `${req.query.message ? req.query.message : ""}` });
 });
 
 app.post("/login", async (req, res) => {
-  const isLoggedIn = await login(req.body);
-  if (isLoggedIn) {
-    res.redirect("/administratorius");
+  const userName = await login(req.body);
+  if (userName) {
+    res.redirect(`/administratorius?name=${userName}`);
   } else {
-    res.redirect("/");
+    res.redirect("/?message=Login details did not match");
   }
 });
 
 app.get("/administratorius", (req, res) => {
-  res.render("admin");
+  if (req.query && req.query.name) {
+    res.render("admin", { name: req.query.name });
+  } else {
+    res.redirect("/");
+  }
 });
 
 app.post("/add-user", async (req, res) => {

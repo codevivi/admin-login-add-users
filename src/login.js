@@ -4,6 +4,5 @@ export const login = async function (user) {
   let found = dbUsers.find((dbUser) => {
     return user.password === dbUser.password && user.email === dbUser.email;
   });
-  console.log(found, "found, in login");
-  return found;
+  return found ? found.name : false;
 };

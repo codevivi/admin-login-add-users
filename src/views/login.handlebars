@@ -1,4 +1,7 @@
 <h1 class="mb-3">Prisijunkite:</h1>
+{{#if message}}
+  <p class="alert alert-danger">{{message}}</p>
+{{/if}}
 <form action="/login" method="POST">
   <div class="mb-3 mt-3">
     <label for="email" class="form-label">El. pašto adresas</label>
