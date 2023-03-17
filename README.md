@@ -1,8 +1,10 @@
-# 🪧Saving data to file
+# 🪧 Express login and save users users to json file
 
 ## 📋 About
 
-Pirmoji užduotis:
+🎯 **Goals:**
+
+### Pirmoji užduotis (30min)
 
 Sukurkite prisijungimo puslapį kuriame atvaizduokite formą iš dviejų laukelių:
 el. pašto adresas
@@ -13,17 +15,11 @@ Priimkite formos duomenis atskirame kelyje (route) POST metodu ir patikrinkite j
 Nepavykus prisijungti nukreipkite vartotoją atgal į prisijungimo puslapį.
 Po sėkmingo prisijungimo nurepkite vartotoją į naują kelią (route), adresu "/administratorius"
 
-Pabaigus užduotį prie žinutės uždėkite Like
-
-## Antra užduotis:
+### Antra užduotis
 
 Administratoriaus dalyje sukurkite galimybę registruoti naujus vartotojus įvedant vardą, pavardę el. pašto adresą bei slaptažodį.
 Įvestus duomenis saugokite JSON duomenų bazėje.
 Sukurkite galimybę prisijungti prie administracinės erdvės kiekvienam sukurtam vartotojui.
-
-<!-- ![alt app screenshot](./assets/bonus-registration-preview-screenshot.png) -->
-
-<!-- 🎯 **Goals:** -->
 
 ### 🏁 Getting started
 
