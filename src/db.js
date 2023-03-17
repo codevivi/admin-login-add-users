@@ -7,7 +7,7 @@ const DEFAULT_DATA = `[{"name":"admin", "email": "admin@bit.lt", "password":"123
 export const saveData = async function save(data) {
   let currentData = JSON.parse(await getData());
   currentData.push(data);
-  await writeData(JSON.stringify(currentData));
+  return await writeData(JSON.stringify(currentData));
 };
 
 export const getData = async function () {
