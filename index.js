@@ -26,6 +26,7 @@ app.post("/login", async (req, res) => {
 app.get("/administratorius", (req, res) => {
   res.render("admin");
 });
+
 app.post("/add-user", async (req, res) => {
   await saveData(req.body);
   res.redirect("/");

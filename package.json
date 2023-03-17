@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon index.js --ignore database.json",
+    "dev": "nodemon . --ignore database.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",

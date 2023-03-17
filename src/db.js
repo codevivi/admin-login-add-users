@@ -12,7 +12,7 @@ export const saveData = async function save(data) {
 
 export const getData = async function () {
   try {
-    return await readFile(DB);
+    return await readFile(DB, "utf-8");
   } catch (err) {
     return DEFAULT_DATA; //if file empty or not created
   }
