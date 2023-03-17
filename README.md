@@ -1,4 +1,4 @@
-# 🪧 Express login and save users users to json file
+# 🪧 Express login and save users to json file
 
 ## 📋 About
 
