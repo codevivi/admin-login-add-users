@@ -1,4 +1,11 @@
-<h1>Administratorius <span class="text-success">{{name}}</span></h1>
+<h1>Administratorius</h1>
+<div class="d-flex m-auto">
+  <span class="text-success fs-3 mx-3 ms-auto fw-bold">{{name}}</span>
+  <a href="./logout" class="btn btn-secondary">Atsijungti</a>
+</div>
+{{#if msg}}
+  <p class="text-success text-center">{{msg}}</p>
+{{/if}}
 
 <form class="" action="/add-user" method="POST">
   <div class="mb-3 mt-3">

@@ -2,24 +2,40 @@
 
 ## 📋 About
 
+Learning node express routing.
+
+This is simple login admin page made with node express server.
+
+After task was done, to practice more, added extra functionality to logout, display user name and pass some messages thought url queries.
+
+Database - json file;
+
+No validations;
+
+Login, logout- just redirects, can be easily bypased.
+
 🎯 **Goals:**
 
-### Pirmoji užduotis (30min)
+[link to task (lt)](./README-task-lt.md)
 
-Sukurkite prisijungimo puslapį kuriame atvaizduokite formą iš dviejų laukelių:
-el. pašto adresas
-slaptažodis
+### Task 1 (30min)
 
-Priimkite formos duomenis atskirame kelyje (route) POST metodu ir patikrinkite juos ar šie sutampa su šiais duomenimis: El. paštas: admin@bit.lt Slaptažodis: 1234
+Create login page with a form of two fields: email and password.
 
-Nepavykus prisijungti nukreipkite vartotoją atgal į prisijungimo puslapį.
-Po sėkmingo prisijungimo nurepkite vartotoją į naują kelią (route), adresu "/administratorius"
+Pass form data to separate route using POST method.
+Check if login data match email: admin@bit.lt and password: 1234
 
-### Antra užduotis
+If login details did not mach redirect user back to login page.
 
-Administratoriaus dalyje sukurkite galimybę registruoti naujus vartotojus įvedant vardą, pavardę el. pašto adresą bei slaptažodį.
-Įvestus duomenis saugokite JSON duomenų bazėje.
-Sukurkite galimybę prisijungti prie administracinės erdvės kiekvienam sukurtam vartotojui.
+If login successful - redirect user to new route '/admin';
+
+### Task 2
+
+Add functionality to add new users on admin page by entering their name, surname, email and password.
+
+Save data in JSON database.
+
+New created users must be able to login as admin;
 
 ### 🏁 Getting started
 
