@@ -53,3 +53,5 @@ New created users must be able to login as admin;
    ```sh
    npm start
    ```
+
+![gif app screenshot](./img/admin-users.gif)

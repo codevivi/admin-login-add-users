@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 app.post("/login", async (req, res) => {
   const userName = await login(req.body);
   if (userName) {
-    res.redirect(`/administratorius?name=${userName}&msg=''`);
+    res.redirect(`/administratorius?name=${userName}`);
   } else {
     res.redirect("/?message=Login details did not match");
   }
