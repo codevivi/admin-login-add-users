@@ -12,7 +12,7 @@ Database - json file;
 
 No validations;
 
-Login, logout- just redirects, can be easily bypased.
+**Login, logout- just redirects, can be easily bypased.**
 
 🎯 **Goals:**
 
