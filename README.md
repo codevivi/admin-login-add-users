@@ -1,24 +1,24 @@
-# 🪧 Express login and save users to json file
+# 🪧 Express admin
+
+2023-03-17 & 2023-03-22 workshop tasks
 
 ## 📋 About
 
-Learning node express routing.
+This is simple admin page made with node express server.
 
-This is simple login admin page made with node express server.
+Login, logout with express-session.
 
-After task was done, to practice more, added extra functionality to logout, display user name and pass some messages thought url queries.
+Add more admin users, edit, delete users.
 
 Database - json file;
 
-No validations;
-
-**Login, logout- just redirects, can be easily bypased.**
+Validation: do not allow duplicate emails;
 
 🎯 **Goals:**
 
 [link to task (lt)](./README-task-lt.md)
 
-### Task 1 (30min)
+### Task 1
 
 Create login page with a form of two fields: email and password.
 
@@ -36,6 +36,16 @@ Add functionality to add new users on admin page by entering their name, surname
 Save data in JSON database.
 
 New created users must be able to login as admin;
+
+### Task 3
+
+_On original task [code for deleting users](https://github.com/viliusramulionis/Javascript-23-01-09/tree/master/2023-03-22) was already given_
+
+Do not allow admin to delete his own account.
+
+### Task 4
+
+Add functionality to edit users, do not allow duplicate emails.
 
 ### 🏁 Getting started
 

@@ -9,6 +9,9 @@ export const deleteUserById = async function save(id) {
   currentData.splice(id, 1);
   return await writeData(JSON.stringify(currentData));
 };
+export const resaveData = async function save(data) {
+  return await writeData(JSON.stringify(data));
+};
 export const saveData = async function save(data) {
   let currentData = await getData();
   currentData.push(data);
