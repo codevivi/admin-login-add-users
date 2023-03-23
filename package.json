@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "dev": "nodemon index.js -L --ignore ./database/admin-users.json",
+    "dev": "nodemon index.js --ignore ./database/admin-users.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.2"
+    "express-handlebars": "^7.0.2",
+    "express-session": "^1.17.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.21"

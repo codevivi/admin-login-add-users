@@ -1,0 +1,22 @@
+
+
+<form class="" action="/add-user" method="POST">
+{{> messages }}
+  <div class="mb-3 mt-3">
+    <label for="name" class="form-label">Vardas</label>
+    <input type="text" required name="name" class="form-control" id="name" />
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="surname" class="form-label">Pavardė</label>
+    <input type="text" name="surname" class="form-control" id="surname" />
+  </div>
+  <div class="mb-3 mt-3">
+    <label for="email" class="form-label">Elektroninio pašto adresas</label>
+    <input type="email" required name="email" class="form-control" id="email" />
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Slaptažodis</label>
+    <input type="password" required name="password" class="form-control" id="password" aria-describedby="password" />
+  </div>
+  <button type="submit" class="btn btn-primary">Pridėti administratoriu</button>
+</form>

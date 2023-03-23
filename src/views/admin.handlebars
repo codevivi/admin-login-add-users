@@ -1,28 +1,35 @@
-<h1>Administratorius</h1>
-<div class="d-flex m-auto">
-  <span class="text-success fs-3 mx-3 ms-auto fw-bold">{{name}}</span>
-  <a href="./logout" class="btn btn-secondary">Atsijungti</a>
-</div>
-{{#if msg}}
-  <p class="text-success text-center">{{msg}}</p>
-{{/if}}
-
-<form class="" action="/add-user" method="POST">
-  <div class="mb-3 mt-3">
-    <label for="name" class="form-label">Vardas</label>
-    <input type="text" required name="name" class="form-control" id="name" />
-  </div>
-  <div class="mb-3 mt-3">
-    <label for="surname" class="form-label">Pavardė</label>
-    <input type="text" name="surname" class="form-control" id="surname" />
-  </div>
-  <div class="mb-3 mt-3">
-    <label for="email" class="form-label">Elektroninio pašto adresas</label>
-    <input type="email" required name="email" class="form-control" id="email" />
-  </div>
-  <div class="mb-3">
-    <label for="password" class="form-label">Slaptažodis</label>
-    <input type="password" required name="password" class="form-control" id="password" aria-describedby="password" />
-  </div>
-  <button type="submit" class="btn btn-primary">Pridėti administratoriu</button>
-</form>
+<h1 class="mb-4">Registruoti vartotojai</h1>
+{{> messages}}
+<style>
+  td:last-child { text-align: right; }
+</style>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Vardas</th>
+      <th>Pavardė</th>
+      <th>El. pašto adresas</th>
+      <th>Slaptažodis</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{surname}}</td>
+        <td>{{email}}</td>
+        <td>{{password}}</td>
+        <td class="text-right">
+          {{#unless current}}
+            <a href="/delete-user/{{@key}}" class="btn btn-danger">Ištrinti</a>
+          {{/unless}}
+          {{#if current}}
+            <span class="text-success"> Prisijungęs</span>
+          {{/if}}
+          <a href="/edit-user/{{@key}}" class="btn btn-warning">Redaguoti</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

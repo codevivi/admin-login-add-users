@@ -11,8 +11,27 @@
     <title>Administratorius</title>
   </head>
 
-  <body class="mt-4">
+  <body class="">
     <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Administratorius</a>
+          <ul class="navbar-nav">
+
+            {{#if globals.isLoggedIn}}
+              <li class="nav-item">
+                <a class="nav-link" href="/add-user">Pridėti administratoriu</a>
+              </li>
+
+              <li class="ms-4 nav-item d-inline-flex align-items-center gap-2 justify-content-center">
+                <small class="text-success">{{globals.userName}}
+                </small>
+                <a class="btn btn-outline-primary" href="/logout">Atsijungti</a>
+              </li>
+            {{/if}}
+          </ul>
+        </div>
+      </nav>
       {{{body}}}
     </div>
   </body>
