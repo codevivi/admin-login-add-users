@@ -11,7 +11,7 @@ export const editUser = async function (req, res) {
     //reiskia email nekaiciamas ir jei ziuretume ar toks egzistuoja, jis egzistuotu
     let alreadyExists = data.find((user) => user.email === email);
     if (alreadyExists) {
-      req.session.errMsg = "Vartotojas su tokiu elektroninio pasto adresu, jau egzituoja.";
+      req.session.errMsg = "Vartotojas su tokiu elektroninio pa6to adresu, jau egzistuoja.";
       req.session.formPrefills = { name, surname, email: current_email, password };
       return res.redirect(`/edit-user/${req.body.id}`); //forma resetinasi..nelabai gerai.. nezinau kaip uzpilyd per redirekta..
     }
