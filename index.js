@@ -4,6 +4,7 @@ import { engine } from "express-handlebars";
 import { saveData, getData } from "./src/db.js";
 import { login } from "./src/controllers/login.js";
 import { addUser } from "./src/controllers/add-user.js";
+import { deleteUser } from "./src/controllers/delete-user.js";
 import { protectRoute } from "./src/middleware/protectRoute.js";
 import session from "express-session";
 import { useGlobalsFromSession } from "./src/use-globals-from-session.js";
@@ -32,7 +33,14 @@ app.get("/", (req, res) => {
 app.post("/login", login);
 
 app.get("/administratorius", protectRoute, async (req, res) => {
-  res.render("admin", { users: await getData(), globals: useGlobalsFromSession(req.session) });
+  let users = await getData();
+  users = users.map((user) => {
+    if (user.email === req.session.user.email) {
+      user.current = "true";
+    }
+    return user;
+  });
+  res.render("admin", { users, globals: useGlobalsFromSession(req.session) });
 });
 app.get("/logout", protectRoute, (req, res) => {
   req.session.user = null;
@@ -44,6 +52,7 @@ app.get("/add-user", protectRoute, (req, res) => {
 });
 
 app.post("/add-user", protectRoute, addUser);
+app.get("/delete-user/:id", protectRoute, deleteUser);
 
 app.listen(3000, () => {
   console.log("server on port 3000");

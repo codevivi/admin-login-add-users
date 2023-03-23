@@ -4,6 +4,11 @@ const DB_NAME = "admin-users.json";
 const DB = DB_PATH + "/" + DB_NAME;
 const DEFAULT_DATA = [{ name: "admin", email: "admin@bit.lt", password: "1234" }];
 
+export const deleteUserById = async function save(id) {
+  let currentData = await getData();
+  currentData.splice(id, 1);
+  return await writeData(JSON.stringify(currentData));
+};
 export const saveData = async function save(data) {
   let currentData = await getData();
   currentData.push(data);
