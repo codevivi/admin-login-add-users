@@ -8,7 +8,7 @@ Sukurkite prisijungimo puslapį kuriame atvaizduokite formą iš dviejų laukeli
 el. pašto adresas
 slaptažodis
 
-Priimkite formos duomenis atskirame kelyje (route) POST metodu ir patikrinkite juos ar šie sutampa su šiais duomenimis: El. paštas: admin@bit.lt Slaptažodis: 1234
+Priimkite formos duomenis atskirame kelyje (route) POST metodu ir patikrinkite juos ar šie sutampa su šiais duomenimis: El. paštas: admin@bit.lt (pakeistas į admin@admin.lt) Slaptažodis: 1234
 
 Nepavykus prisijungti nukreipkite vartotoją atgal į prisijungimo puslapį.
 Po sėkmingo prisijungimo nurepkite vartotoją į naują kelią (route), adresu "/administratorius"

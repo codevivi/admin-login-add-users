@@ -2,7 +2,7 @@ import { writeFile, mkdir, readFile } from "node:fs/promises";
 const DB_PATH = new URL("./../database/", import.meta.url).pathname;
 const DB_NAME = "admin-users.json";
 const DB = DB_PATH + "/" + DB_NAME;
-const DEFAULT_DATA = [{ name: "admin", email: "admin@bit.lt", password: "1234" }];
+const DEFAULT_DATA = [{ name: "admin", email: "admin@admin.lt", password: "1234" }];
 
 export const deleteUserById = async function save(id) {
   let currentData = await getData();

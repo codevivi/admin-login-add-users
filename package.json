@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
+    "start": "node index.js --ignore ./database/admin-users.json",
     "dev": "nodemon index.js --ignore ./database/admin-users.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

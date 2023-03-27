@@ -23,7 +23,7 @@ Validation: do not allow duplicate emails;
 Create login page with a form of two fields: email and password.
 
 Pass form data to separate route using POST method.
-Check if login data match email: admin@bit.lt and password: 1234
+Check if login data match email: admin@admin.lt(original was admin@bit.lt) and password: 1234
 
 If login details did not mach redirect user back to login page.
 
@@ -63,5 +63,7 @@ Add functionality to edit users, do not allow duplicate emails.
    ```sh
    npm start
    ```
+
+4. default login: admin@admin.lt, 1234
 
 ![gif app screenshot](./img/admin-users.gif)
